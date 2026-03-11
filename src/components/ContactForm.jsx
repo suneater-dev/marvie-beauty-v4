@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from "react";
-import { Phone, Mail, MapPin, Clock, Send, Check } from "./Icons";
+import { Phone, Mail, MapPin, Clock, Send, Check, Instagram, TikTok } from "./Icons";
 import { useReveal } from "../hooks/useReveal";
 
 const WHATSAPP_URL = "https://wa.me/6287729138734";
@@ -268,6 +268,38 @@ export default function ContactForm() {
                   </Wrapper>
                 );
               })}
+            </div>
+
+            {/* Social Links */}
+            <div className="flex items-center gap-3 mt-6">
+              <a
+                href="https://www.instagram.com/marviebeauty_by_dr.winayani"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 p-4 rounded-2xl border border-border/60 hover:border-primary/20 hover:bg-bg transition-all duration-200 cursor-pointer flex-1"
+              >
+                <div className="flex-shrink-0 w-11 h-11 rounded-xl bg-accent/15 flex items-center justify-center">
+                  <Instagram size={20} className="text-primary" />
+                </div>
+                <div>
+                  <div className="text-xs font-medium text-text-muted mb-1">Instagram</div>
+                  <div className="text-sm text-primary font-medium">@marviebeauty</div>
+                </div>
+              </a>
+              <a
+                href="https://www.tiktok.com/@marviebeautybydrwinayani"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 p-4 rounded-2xl border border-border/60 hover:border-primary/20 hover:bg-bg transition-all duration-200 cursor-pointer flex-1"
+              >
+                <div className="flex-shrink-0 w-11 h-11 rounded-xl bg-accent/15 flex items-center justify-center">
+                  <TikTok size={20} className="text-primary" />
+                </div>
+                <div>
+                  <div className="text-xs font-medium text-text-muted mb-1">TikTok</div>
+                  <div className="text-sm text-primary font-medium">@marviebeauty</div>
+                </div>
+              </a>
             </div>
 
             {/* Map Embed Placeholder */}

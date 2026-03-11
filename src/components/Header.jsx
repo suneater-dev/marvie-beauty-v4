@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X } from "./Icons";
+import { Menu, X, Instagram, TikTok } from "./Icons";
 
 const NAV_LINKS = [
   { label: "Services", href: "#services" },
@@ -120,6 +120,28 @@ export default function Header() {
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-3">
             <a
+              href="https://www.instagram.com/marviebeauty_by_dr.winayani"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`p-2 rounded-xl transition-colors cursor-pointer ${
+                isScrolled ? "text-primary hover:bg-primary/5" : "text-white/80 hover:text-white hover:bg-white/10"
+              }`}
+              aria-label="Instagram"
+            >
+              <Instagram size={18} />
+            </a>
+            <a
+              href="https://www.tiktok.com/@marviebeautybydrwinayani"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`p-2 rounded-xl transition-colors cursor-pointer ${
+                isScrolled ? "text-primary hover:bg-primary/5" : "text-white/80 hover:text-white hover:bg-white/10"
+              }`}
+              aria-label="TikTok"
+            >
+              <TikTok size={18} />
+            </a>
+            <a
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
@@ -205,7 +227,15 @@ export default function Header() {
               >
                 Book Appointment
               </a>
-              <p className="text-xs text-text-muted text-center mt-4">
+              <div className="flex items-center justify-center gap-4 mt-4">
+                <a href="https://www.instagram.com/marviebeauty_by_dr.winayani" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary-600 transition-colors cursor-pointer" aria-label="Instagram">
+                  <Instagram size={20} />
+                </a>
+                <a href="https://www.tiktok.com/@marviebeautybydrwinayani" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary-600 transition-colors cursor-pointer" aria-label="TikTok">
+                  <TikTok size={20} />
+                </a>
+              </div>
+              <p className="text-xs text-text-muted text-center mt-3">
                 Jl. Gunung Soputan I No.83, Denpasar Barat
               </p>
             </div>

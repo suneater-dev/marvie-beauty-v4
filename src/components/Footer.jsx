@@ -20,7 +20,7 @@ const SOCIAL_LINKS = [
   {
     icon: TikTok,
     label: "TikTok",
-    href: "https://www.tiktok.com/@marviebeautyclinic",
+    href: "https://www.tiktok.com/@marviebeautybydrwinayani",
   },
   {
     icon: WhatsApp,
