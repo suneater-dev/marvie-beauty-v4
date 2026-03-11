@@ -1,0 +1,191 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Font: Zagora */
+@font-face {
+  font-family: "Zagora";
+  src: url("../public/fonts/Zagora.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Base Layer */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-bg text-text font-sans;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  ::selection {
+    @apply bg-accent/30 text-primary;
+  }
+
+  /* Focus styles */
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-primary/50 rounded-sm;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary/15 rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary/25;
+  }
+}
+
+/* Component Layer */
+@layer components {
+  /* shadcn-inspired button base */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-2xl font-medium
+           transition-all duration-200 ease-out
+           focus-visible:outline-2 focus-visible:outline-offset-2
+           disabled:pointer-events-none disabled:opacity-50
+           cursor-pointer select-none;
+  }
+
+  .btn-primary {
+    @apply btn bg-primary text-white px-8 py-3.5 text-sm tracking-wide
+           hover:bg-primary-600 active:scale-[0.98]
+           focus-visible:outline-primary;
+  }
+
+  .btn-accent {
+    @apply btn bg-accent text-primary px-8 py-3.5 text-sm tracking-wide
+           hover:bg-accent-500 active:scale-[0.98]
+           focus-visible:outline-accent;
+  }
+
+  .btn-outline {
+    @apply btn border border-border bg-transparent text-primary px-8 py-3.5 text-sm tracking-wide
+           hover:bg-primary/5 hover:border-primary/30 active:scale-[0.98]
+           focus-visible:outline-primary;
+  }
+
+  .btn-ghost {
+    @apply btn text-primary px-4 py-2 text-sm
+           hover:bg-primary/5 active:scale-[0.98];
+  }
+
+  .btn-sm {
+    @apply px-5 py-2.5 text-xs;
+  }
+
+  .btn-lg {
+    @apply px-10 py-4 text-base;
+  }
+
+  /* shadcn-inspired card */
+  .card {
+    @apply bg-surface rounded-3xl border border-border/60 shadow-soft
+           transition-all duration-300;
+  }
+
+  .card-hover {
+    @apply card hover:shadow-soft-lg hover:border-border hover:-translate-y-1
+           cursor-pointer;
+  }
+
+  /* Glass card */
+  .glass {
+    @apply bg-white/70 backdrop-blur-xl border border-white/40
+           shadow-glass;
+  }
+
+  /* Section container */
+  .section {
+    @apply px-5 sm:px-8 lg:px-12 py-20 md:py-28 lg:py-32;
+  }
+
+  .container-tight {
+    @apply max-w-6xl mx-auto;
+  }
+
+  .container-wide {
+    @apply max-w-7xl mx-auto;
+  }
+
+  /* Section label (small caps above headings) */
+  .section-label {
+    @apply text-xs font-medium uppercase tracking-[0.2em] text-text-muted mb-4;
+  }
+
+  /* Animated on scroll - hidden by default */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+  .reveal-delay-3 { transition-delay: 0.3s; }
+  .reveal-delay-4 { transition-delay: 0.4s; }
+  .reveal-delay-5 { transition-delay: 0.5s; }
+
+  /* Badge */
+  .badge {
+    @apply inline-flex items-center gap-1.5 rounded-full px-3 py-1
+           text-xs font-medium tracking-wide;
+  }
+
+  .badge-accent {
+    @apply badge bg-accent/20 text-primary;
+  }
+
+  .badge-primary {
+    @apply badge bg-primary/10 text-primary;
+  }
+}
+
+/* Utility Layer */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
