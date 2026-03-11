@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowRight, WhatsApp } from "./Icons";
+import { WhatsApp } from "./Icons";
 import { useReveal } from "../hooks/useReveal";
 
 const WHATSAPP_URL = "https://wa.me/+6287729138734?text=Hi%2C%20saya%20tertarik%20dengan%20promo%20March%202026%20di%20Marvie%20Beauty.%20Bisa%20info%20lebih%20lanjut%3F";
