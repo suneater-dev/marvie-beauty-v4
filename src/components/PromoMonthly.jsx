@@ -2,68 +2,64 @@ import React from "react";
 import { WhatsApp } from "./Icons";
 import { useReveal } from "../hooks/useReveal";
 
-const WHATSAPP_URL = "https://wa.me/+6287729138734?text=Hi%2C%20saya%20tertarik%20dengan%20promo%20March%202026%20di%20Marvie%20Beauty.%20Bisa%20info%20lebih%20lanjut%3F";
+const WHATSAPP_URL = "https://wa.me/+6287729138734?text=Hi%2C%20saya%20tertarik%20dengan%20promo%20April%202026%20di%20Marvie%20Beauty.%20Bisa%20info%20lebih%20lanjut%3F";
 
 const LEFT_COLUMN = [
   {
     name: "BOTOX",
     items: [
-      { treatment: "Full Face", price: "2,500k" },
-      { treatment: "Masseter", price: "1,800k" },
-      { treatment: "Upper", price: "1,500k" },
-      { treatment: "Nefertiti", price: "3,000k" },
-      { treatment: "Traps", price: "3,000k" },
-      { treatment: "Tricep", price: "3,000k" },
-      { treatment: "Armpit", price: "3,000k" },
-      { treatment: "Hand", price: "3,000k" },
+      { treatment: "Fullface", price: "3,000k" },
+      { treatment: "Upper Face", price: "1,500k" },
+      { treatment: "Crossfit", price: "600k" },
     ],
   },
-  { name: "BOTOX ALERGAN", single: true, price: "5,800k" },
-  { name: "ALL FILLER", single: true, price: "1,500k" },
-  { name: "BUTTOCK FILLER", single: true, price: "15,000k / 150cc" },
   {
-    name: "LASER",
+    name: "FILLER",
     items: [
-      { treatment: "Eye Brow Removal", price: "300k" },
-      { treatment: "Tattoo Removal S", price: "500k" },
-      { treatment: "Tattoo Removal M", price: "800k" },
-      { treatment: "Tattoo Removal XL", price: "1,500k" },
-      { treatment: "Acne", price: "500k" },
-      { treatment: "Back Acne", price: "1,000k" },
+      { treatment: "Chin", price: "3,000k" },
+      { treatment: "Lip", price: "3,000k" },
+      { treatment: "Undereye", price: "3,000k" },
     ],
   },
-  { name: "COLLAGEN STIMULATOR", single: true, price: "2,500k" },
+  {
+    name: "THREAD",
+    items: [
+      { treatment: "Nose Thread 5", price: "2,500k" },
+      { treatment: "Threadlift 4", price: "3,200k" },
+    ],
+  },
+  { name: "FACIAL HYDRA", single: true, price: "300k" },
 ];
 
 const RIGHT_COLUMN = [
   {
-    name: "THREAD TREATMENT",
+    name: "SKIN BOOSTER",
     items: [
-      { treatment: "Nose thread", price: "500k/ thread" },
-      { treatment: "Threadlift Korean", price: "700k/ thread" },
-      { treatment: "Threadlift Korean Croquis", price: "1,000k/ thread" },
+      { treatment: "Skin Booster", price: "1,500k" },
+      { treatment: "Dermapen Skin Booster", price: "1,500k" },
+      { treatment: "Inject Skin Booster", price: "1,500k" },
+      { treatment: "NCTF", price: "1,500k" },
     ],
   },
-  { name: "HAND DNA SALMON", single: true, price: "1,000k" },
-  { name: "NAD+ INFUSION", single: true, price: "2,500k" },
+  {
+    name: "INFUSION",
+    items: [
+      { treatment: "Whitening", price: "750k" },
+      { treatment: "Collagen", price: "750k" },
+    ],
+  },
   {
     name: "DPL",
     items: [
-      { treatment: "Face Rejuve", price: "500k" },
-      { treatment: "Armpit", price: "300k" },
-      { treatment: "Miss V / Brazilian", price: "300k" },
-      { treatment: "Hand", price: "500k" },
-      { treatment: "Foot", price: "500k" },
+      { treatment: "2 Area", price: "500k" },
+      { treatment: "Armpit", price: "500k" },
     ],
   },
   {
-    name: "SKIN BOOSTER",
+    name: "MESSO",
     items: [
-      { treatment: "Korean Moist", price: "500k" },
-      { treatment: "Korean Glowing", price: "800k" },
-      { treatment: "Korean Full Packed", price: "1,000k" },
-      { treatment: "Yaqoot", price: "2,500k" },
-      { treatment: "NCTF", price: "1,500k" },
+      { treatment: "2cc", price: "500k" },
+      { treatment: "4cc", price: "1,000k" },
     ],
   },
 ];
@@ -141,13 +137,13 @@ export default function PromoMonthly() {
               <span className="relative inline-flex rounded-full h-2 w-2 bg-[#D4AF37]" />
             </span>
             <span className="text-[11px] font-bold uppercase tracking-[0.15em] text-[#D4AF37]">
-              March 2026
+              April 2026
             </span>
           </div>
 
           <h2 className="font-display text-display-xl text-white mb-1 tracking-wide"
               style={{ textShadow: "0 0 60px rgba(212,175,55,0.12)" }}>
-            MARCH PROMO
+            APRIL PROMO
           </h2>
           <p className="text-xl text-[#D4AF37]/40 italic font-display">pricelist</p>
 
@@ -184,8 +180,7 @@ export default function PromoMonthly() {
 
         {/* Footer */}
         <div className="text-center mt-12">
-          <p className="text-xs text-white/15 mb-6">www.marvieclinic.com</p>
-          <a
+<a
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
@@ -194,7 +189,7 @@ export default function PromoMonthly() {
                        transition-all duration-300 shadow-lg shadow-[#25D366]/25"
           >
             <WhatsApp size={20} />
-            Ask About March Promos
+            Ask About April Promos
           </a>
         </div>
       </div>

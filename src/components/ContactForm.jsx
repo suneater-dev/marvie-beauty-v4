@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from "react";
-import { Phone, Mail, MapPin, Clock, Send, Check, Instagram, TikTok } from "./Icons";
+import { Phone, MapPin, Clock, Send, Check, Instagram, TikTok } from "./Icons";
 import { useReveal } from "../hooks/useReveal";
 
 const WHATSAPP_URL = "https://wa.me/6287729138734";
@@ -11,13 +11,6 @@ const CONTACT_INFO = [
     value: "+62 877-2913-8734",
     href: WHATSAPP_URL,
     external: true,
-  },
-  {
-    icon: Mail,
-    label: "Email",
-    value: "contact@marviebeauty.com",
-    href: "mailto:contact@marviebeauty.com",
-    external: false,
   },
   {
     icon: MapPin,

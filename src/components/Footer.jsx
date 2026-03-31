@@ -126,11 +126,6 @@ export default function Footer() {
                   +62 877-2913-8734
                 </a>
               </li>
-              <li>
-                <a href="mailto:contact@marviebeauty.com" className="hover:text-white transition-colors cursor-pointer">
-                  contact@marviebeauty.com
-                </a>
-              </li>
               <li className="leading-relaxed">
                 Jl. Gunung Soputan I No.83,<br />
                 Pemecutan Klod, Denpasar Barat,<br />
