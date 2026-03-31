@@ -6,57 +6,62 @@ const WHATSAPP_URL = "https://wa.me/+6287729138734?text=Hi%2C%20saya%20tertarik%
 
 const LEFT_COLUMN = [
   {
-    name: "BOTOX",
+    name: "BOTOX TREATMENT",
     items: [
-      { treatment: "Fullface", price: "3,000k" },
+      { treatment: "Full Face", price: "2,499k" },
       { treatment: "Upper Face", price: "1,500k" },
       { treatment: "Crossfit", price: "600k" },
+      { treatment: "Masseter", price: "1,800k" },
+      { treatment: "Traps", price: "2,999k" },
+      { treatment: "Armpit", price: "2,999k" },
+      { treatment: "Hand", price: "2,999k" },
     ],
   },
   {
-    name: "FILLER",
+    name: "FILLER TREATMENT",
     items: [
-      { treatment: "Chin", price: "3,000k" },
-      { treatment: "Lip", price: "3,000k" },
-      { treatment: "Undereye", price: "3,000k" },
+      { treatment: "Chin", price: "1,500k" },
+      { treatment: "Lip", price: "1,500k" },
+      { treatment: "Undereye", price: "1,500k" },
+      { treatment: "Buttocks", price: "15,000k / 150cc" },
     ],
   },
   {
-    name: "THREAD",
+    name: "THREAD TREATMENT",
     items: [
-      { treatment: "Nose Thread 5", price: "2,500k" },
-      { treatment: "Threadlift 4", price: "3,200k" },
+      { treatment: "Nose Thread", price: "499k / Thread" },
+      { treatment: "Threadlift", originalPrice: "1,000k", price: "799k / Thread" },
+      { treatment: "Croquis", originalPrice: "1,200k", price: "1,000k / Thread" },
     ],
   },
-  { name: "FACIAL HYDRA", single: true, price: "300k" },
+  { name: "FACIAL HYDRA TREATMENT", single: true, price: "300k" },
 ];
 
 const RIGHT_COLUMN = [
   {
-    name: "SKIN BOOSTER",
+    name: "SKIN BOOSTER TREATMENT",
     items: [
-      { treatment: "Skin Booster", price: "1,500k" },
-      { treatment: "Dermapen Skin Booster", price: "1,500k" },
-      { treatment: "Inject Skin Booster", price: "1,500k" },
-      { treatment: "NCTF", price: "1,500k" },
+      { treatment: "Skin Booster 1", price: "500k" },
+      { treatment: "Skin Booster 2", price: "700k" },
+      { treatment: "Skin Booster 3", price: "1,000k" },
     ],
   },
   {
-    name: "INFUSION",
+    name: "INFUSION TREATMENT",
     items: [
       { treatment: "Whitening", price: "750k" },
       { treatment: "Collagen", price: "750k" },
     ],
   },
   {
-    name: "DPL",
+    name: "DPL TREATMENT",
     items: [
       { treatment: "2 Area", price: "500k" },
       { treatment: "Armpit", price: "500k" },
     ],
   },
   {
-    name: "MESSO",
+    name: "MESSO TREATMENT",
     items: [
       { treatment: "2cc", price: "500k" },
       { treatment: "4cc", price: "1,000k" },
@@ -73,7 +78,7 @@ function CategoryBlock({ category }) {
             {category.name}
           </h3>
           <div className="flex-1 h-px bg-gradient-to-r from-[#D4AF37]/25 to-transparent" />
-          <span className="text-sm font-bold text-[#D4AF37] tabular-nums whitespace-nowrap">
+          <span className="text-sm font-semibold text-white/70 tabular-nums whitespace-nowrap">
             {category.price}
           </span>
         </div>
@@ -95,8 +100,11 @@ function CategoryBlock({ category }) {
             <span className="text-sm text-white/40 group-hover:text-white/60 transition-colors">
               {item.treatment}
             </span>
-            <span className="text-sm font-semibold text-white/70 group-hover:text-[#D4AF37] tabular-nums whitespace-nowrap transition-colors">
-              {item.price}
+            <span className="text-sm font-semibold tabular-nums whitespace-nowrap transition-colors">
+              {item.originalPrice && (
+                <span className="text-white/30 line-through mr-2">{item.originalPrice}</span>
+              )}
+              <span className="text-white/70 group-hover:text-[#D4AF37]">{item.price}</span>
             </span>
           </div>
         ))}
