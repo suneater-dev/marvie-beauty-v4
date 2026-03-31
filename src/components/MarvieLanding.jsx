@@ -3,7 +3,6 @@ import Header from "./Header";
 import Hero from "./Hero";
 import PromoLebaran from "./PromoLebaran";
 import PromoMonthly from "./PromoMonthly";
-import PromoWeekly from "./PromoWeekly";
 import ServicesGrid from "./ServicesGrid";
 import About from "./About";
 
@@ -20,7 +19,6 @@ export default function MarvieLanding() {
       <main>
         <Hero />
         <PromoLebaran />
-        <PromoWeekly />
         <PromoMonthly />
         <ServicesGrid />
         <About />
