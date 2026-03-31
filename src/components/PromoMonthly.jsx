@@ -180,7 +180,8 @@ export default function PromoMonthly() {
 
         {/* Footer */}
         <div className="text-center mt-12">
-<a
+          <p className="text-xs text-white/25 mb-6">All prices are listed in IDR (Indonesian Rupiah)</p>
+          <a
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"

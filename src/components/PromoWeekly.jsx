@@ -5,22 +5,25 @@ const WEEKS = [
   {
     week: "I",
     treatment: "Yaqoot Skin Booster",
-    prices: ["2,000k", "2,500k"],
+    originalPrice: "2,500k",
+    promoPrice: "2,000k",
   },
   {
     week: "II",
     treatment: "Skin Booster",
-    prices: ["499k"],
+    promoPrice: "499k",
   },
   {
     week: "III",
     treatment: "Skin Booster NaFi",
-    prices: ["1,600k", "600k"],
+    originalPrice: "1,600k",
+    promoPrice: "600k",
   },
   {
     week: "IV",
     treatment: "Botox Full Face",
-    prices: ["3,000k", "2,250k"],
+    originalPrice: "3,000k",
+    promoPrice: "2,250k",
   },
 ];
 
@@ -40,17 +43,18 @@ function WeekCard({ data }) {
       </h3>
 
       {/* Prices */}
-      <div className="flex flex-wrap items-center gap-2">
-        {data.prices.map((price, i) => (
-          <React.Fragment key={price}>
-            <span className="text-lg font-bold text-[#D4AF37] tabular-nums">
-              {price}
-            </span>
-            {i < data.prices.length - 1 && (
-              <span className="text-white/20">/</span>
-            )}
-          </React.Fragment>
-        ))}
+      <div className="flex flex-wrap items-baseline gap-2">
+        {data.originalPrice && (
+          <span className="text-sm text-white/60 line-through tabular-nums">
+            {data.originalPrice}
+          </span>
+        )}
+        {data.originalPrice && (
+          <span className="text-xs text-white/40 italic">now only</span>
+        )}
+        <span className="text-xl font-bold text-[#D4AF37] tabular-nums">
+          {data.promoPrice}
+        </span>
       </div>
     </div>
   );
@@ -92,6 +96,8 @@ export default function PromoWeekly() {
               <WeekCard key={w.week} data={w} />
             ))}
           </div>
+
+          <p className="text-xs text-white/25 text-center mt-8">All prices are listed in IDR (Indonesian Rupiah)</p>
         </div>
       </div>
     </section>

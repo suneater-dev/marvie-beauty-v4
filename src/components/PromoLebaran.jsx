@@ -200,6 +200,7 @@ export default function PromoLebaran() {
 
         {/* CTA */}
         <div className="text-center mt-14">
+          <p className="text-xs text-white/25 mb-6">All prices are listed in IDR (Indonesian Rupiah)</p>
           <a
             href={WHATSAPP_URL}
             target="_blank"

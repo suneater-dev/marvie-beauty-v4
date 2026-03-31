@@ -65,6 +65,13 @@ const LEFT_COLUMN = [
       { treatment: "Hangover Cure", price: "999K" },
     ],
   },
+  {
+    name: "MESSO TREATMENT",
+    items: [
+      { treatment: "Messo", price: "250K/cc" },
+      { treatment: "Body Messo", price: "799K/10cc" },
+    ],
+  },
 ];
 
 const RIGHT_COLUMN = [
@@ -86,10 +93,10 @@ const RIGHT_COLUMN = [
   {
     name: "KOREAN FILLER TREATMENT",
     items: [
-      { treatment: "Chin", price: "2,999K" },
-      { treatment: "Lips", price: "2,999K" },
-      { treatment: "Smile Line", price: "2,999K" },
-      { treatment: "Under Eye", price: "2,999K" },
+      { treatment: "Chin", price: "1,499K" },
+      { treatment: "Lips", price: "1,499K" },
+      { treatment: "Smile Line", price: "1,499K" },
+      { treatment: "Under Eye", price: "1,499K" },
     ],
   },
   {
@@ -127,7 +134,7 @@ const RIGHT_COLUMN = [
     items: [
       { treatment: "Upper Face", price: "1,999K" },
       { treatment: "Jawline", price: "1,999K" },
-      { treatment: "Full Face", price: "2,999K" },
+      { treatment: "Full Face", price: "2,499K" },
       { treatment: "Nose", price: "1,499K" },
       { treatment: "Shoulder", price: "4,999K" },
       { treatment: "Armpit", price: "2,999K" },
@@ -225,7 +232,7 @@ export default function PricelistPage() {
 
         {/* Footer CTA */}
         <div className="text-center mt-16">
-          <p className="text-xs text-white/15 mb-6">www.marvieclinic.com</p>
+          <p className="text-xs text-white/25 mb-6">All prices are listed in IDR (Indonesian Rupiah)</p>
           <a
             href={WHATSAPP_URL}
             target="_blank"
